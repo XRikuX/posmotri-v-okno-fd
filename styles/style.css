@@ -52,6 +52,7 @@ html {
   height: 386px;
 }
 .result__video-container {
+  position: relative;
 }
 .result__video {
   width: 100%;
@@ -74,6 +75,7 @@ html {
   align-items: center;
   width: fit-content;
   gap: 1.5px;
+  cursor: pointer;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -148,8 +150,30 @@ html {
   opacity: 0;
 }
 .button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #1B1919;
+  cursor: pointer;
+}
+
+.button:focus-visible(:hover) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
 }
 .search-form__submit-button {
+  width: 194px;
+  height: 34px;
+  align-self: end;
 }
 .content__details {
 }
@@ -165,6 +189,7 @@ html {
   color: rgb(255 255 255 / 0.3);
 }
 .content__list-container {
+  position: relative;
   overflow-y: auto;
   overflow-x: hidden;
   width: 399px;
@@ -175,6 +200,7 @@ html {
   flex-direction: column;
   gap: 30px;
 }
+
 .preloader-template {
 }
 .preloader {
@@ -186,20 +212,41 @@ html {
 .cards-list-item-template {
 }
 .content__list-item {
-
+  padding: 0 3px;
 }
 .content__card-link {
+  display: block;
   color: inherit;
   text-decoration: none;
 }
+
+.content__card-link:focus-visible(:hover) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
 .content__video-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .content__video-card-description-container {
+  overflow: hidden;
+  flex-grow: 1;
+  min-width: 0;
 }
 .content__video-card-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-family: Oswald, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -207,6 +254,9 @@ html {
   text-transform: uppercase;
 }
 .content__video-card-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .content__video-card-thumbnail {
   width: 194px;
@@ -215,6 +265,8 @@ html {
 .more-button-template {
 }
 .more-button {
+  width: 100%;
+  height: 34px;
 }
 .error-template {
 }
