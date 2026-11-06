@@ -232,9 +232,12 @@ html {
   align-items: flex-start;
 }
 .content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   flex-grow: 1;
   min-width: 0;
+  gap: 6px;
 }
 .content__video-card-title {
   overflow: hidden;
@@ -248,14 +251,18 @@ html {
   line-height: 1;
 }
 .content__video-card-description {
+  overflow-wrap: anywhere;
+  max-width: 100%;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
-  line-clamp: 1;
+  line-clamp: 4;
   overflow: hidden;
+  font-size: 18px;
+  line-height: 0.9;
 }
 .content__video-card-thumbnail {
-  width: 194px;
+  min-width: 194px;
   height: 103px;
   object-fit: cover;
   object-position: center;
