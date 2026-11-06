@@ -259,7 +259,7 @@ html {
   line-clamp: 4;
   overflow: hidden;
   font-size: 18px;
-  line-height: 0.9;
+  line-height: 0.9; 
 }
 .content__video-card-thumbnail {
   min-width: 194px;
